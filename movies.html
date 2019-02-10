@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movies</title>
+  <meta charset="utf-8" />
+  <style media="screen">
+    body{
+        height: 90vh;
+      }
+      form{
+        text-align: center;
+        margin-top: 10px;
+        font-style: oblique;
+        font-size: 30px;
+      }
+      #form-input{
+        padding: 10px;
+        font-size: 15px;
+        font-style: oblique;
+      }
+      input[type=button]{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      ul{
+        margin-top: 25px;
+        height: 250px;
+        overflow-y: scroll;
+      }
+      li{
+        text-align: center;
+        display: inline-block;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+        float: left;
+        margin-right: 50px;
+        margin-bottom: 75px;
+      }
+      li:hover{
+        color:red;
+      }
+      #scroll{
+        margin-top: 20px;
+      }
+      p{
+        margin-bottom: 5px;
+        margin-top: 1px;
+      }
+    </style>
+</head>
+
+<body onload="initialize();">
+  <form>
+    <label>Movie title: <input type="text" id="form-input" /></label>
+    <input type="button" onclick="sendRequest();" value="Display Info" />
+  </form>
+  <div id="output" style="margin-left:75px;">
+    <ul id='movielist' style="list-style:none">
+
+    </ul>
+    <p style="text-align:center" id="scroll"></p>
+  </div>
+  <div id="preview" style="margin-top:10px;">
+    <div style="width:35%; display:inline; float:left">
+    <img alt="" id="poster" style="width:425px;height:400px;">
+  </div>
+  <div style="width:65%; display:inline; float:left; font-size:20px">
+    <p id="title"></p>
+    <p id="cast"></p>
+    <p id="genres"></p>
+    <p id="overview"></p>
+  </div>
+  </div>
+  <script type="text/javascript" src="movies.js"></script>
+</body>
+
+</html>
